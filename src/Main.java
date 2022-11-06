@@ -70,7 +70,7 @@ public class Main {
       totalsolary = totalsolary / employees.length;
 
     }
-    System.out.println("Среднее значение зарплат " +  totalsolary);
+    System.out.println("Среднее значение зарплат - " +  totalsolary);
 
   }
 }
