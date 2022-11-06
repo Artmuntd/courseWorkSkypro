@@ -2,7 +2,7 @@ public class Employee {
 
         private String fullName;
 
-        private int department;
+        private  int department;
 
         private static int  count;
 
@@ -26,7 +26,7 @@ public class Employee {
         public  int getDepartment(){
             return this.department;
         }
-        public int getSalary(){
+        public  int getSalary(){
             return this.salary;
         }
 
