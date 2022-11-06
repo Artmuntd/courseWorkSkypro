@@ -36,40 +36,41 @@ public class Main {
     }
   }
 
-  public static void totalSalaryPerMonth() {
+  public static int totalSalaryPerMonth() {
     int totalsolary = 0;
     for (int i = 0; i < employees.length; i++) {
       totalsolary = totalsolary + employees[i].getSalary();
 
     }
     System.out.println(" Общая сумма затрат на заработную плату - " + totalsolary);
+    return totalsolary;
   }
 
   public static void minAndMaxSalary() {
        int minSalary = employees[0].getSalary();
-       int maxSalary = employees[1].getSalary();
+       int maxSalary = employees[0].getSalary();
+       String maxSalaryEmp = "";
+       String minSalaryEmp = "";
+
 
     for (int i = 0; i<employees.length; i++){
       if (minSalary<employees[i].getSalary()){
          minSalary=employees[i].getSalary();
+         minSalaryEmp = employees[i].getFullName();
       } else if (maxSalary > employees[i].getSalary()) {
         maxSalary=employees[i].getSalary();
+        maxSalaryEmp=employees[i].getFullName();
 
       }
 
 
     }
-    System.out.println("Максимальная зарплата " + maxSalary);
-    System.out.println("Минимальная  зарплата "+ minSalary);
+    System.out.println("Максимальная зарплата " + minSalary + minSalaryEmp);
+    System.out.println("Минимальная  зарплата " + maxSalary + maxSalaryEmp);
   }
   public  static void averageSalary(){
-    int totalsolary = 0;
-
-    for (int i = 0; i < employees.length; i++) {
-      totalsolary = totalsolary + employees[i].getSalary();
-      totalsolary = totalsolary / employees.length;
-
-    }
+    int totalsolary = totalSalaryPerMonth();
+    totalsolary = totalsolary / employees.length;
     System.out.println("Среднее значение зарплат - " +  totalsolary);
 
   }
